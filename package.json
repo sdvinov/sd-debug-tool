@@ -1,11 +1,18 @@
 {
-  "name": "utility-tool",
+  "name": "utility-tool-sd",
   "version": "1.0.0",
   "description": "Debug tool on NodeJS",
-  "main": "src/app.js",
+  "main": "src/util.js",
   "scripts": {
     "test": "mocha"
   },
   "author": "Sergej Dvinov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "1.1.3"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  }
 }
