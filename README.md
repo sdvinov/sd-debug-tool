@@ -3,7 +3,7 @@ This project has a built in debug tool. It only triggers if the environmental va
 
 ### Usage
 To run it simply do this:
-```JavaScript
+```javascript
 const util = require('utility-tool-sd');
 const path = 'src/routes/api/api.js';
 util.debug('My message', 'src/myApp.js', 'success');
