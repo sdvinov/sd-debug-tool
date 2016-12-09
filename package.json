@@ -1,6 +1,6 @@
 {
   "name": "utility-tool-sd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Debug tool on NodeJS",
   "main": "src/util.js",
   "scripts": {
