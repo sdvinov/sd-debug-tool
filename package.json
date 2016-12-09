@@ -1,0 +1,11 @@
+{
+  "name": "utility-tool",
+  "version": "1.0.0",
+  "description": "Debug tool on NodeJS",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Sergej Dvinov",
+  "license": "ISC"
+}
