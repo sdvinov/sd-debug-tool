@@ -1,5 +1,31 @@
 const chalk = require('chalk');
 
+function bump(currentSemVersion, typeofIncrement) {
+  // Array position for Major [0]
+  // Array position for Minor [1]
+  // Array position for Patch [2]
+  const aryVersions = currentSemVersion.split('.');
+
+  for (const versionIndex in aryVersions) {
+    aryVersions[versionIndex] = parseInt(aryVersions[versionIndex], 10);
+  }
+
+  // aryVersions.forEach(versionIndex => versionIndex = parseInt(versionIndex));
+  if (typeofIncrement.toLowerCase() === 'patch') {
+    aryVersions[2] += 1; // patch
+  } else if (typeofIncrement.toLowerCase() === 'minor') {
+    aryVersions[2] = 0; // patch
+    aryVersions[1] += 1; // minor
+  } else if (typeofIncrement.toLowerCase() === 'major') {
+    aryVersions[2] = 0; // patch
+    aryVersions[1] = 0; // minor
+    aryVersions[0] += 1; // major
+  }
+
+  return aryVersions.join('.');
+}
+
+
 function debug(message, path, level) {
   if (process.env.DEBUG === 'true') {
     const fs = require('fs');
@@ -61,3 +87,4 @@ function debug(message, path, level) {
 }
 
 exports.debug = debug;
+exports.bump = bump;
